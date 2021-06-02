@@ -1,6 +1,6 @@
 check_names <- function(d_in) {
-   if (!all.equal(dimnames(d_in$ZZ)[[2]], colnames(d_in$XX)) &&
-       all.equal(dimnames(d_in$ZZ_prior)[[2]], colnames(d_in$XX)))
+   if (isFALSE(all.equal(dimnames(d_in$ZZ)[[2]], colnames(d_in$XX)) &&
+       all.equal(dimnames(d_in$ZZ_prior)[[2]], colnames(d_in$XX))))
      stop("Names in the design matrix and array of hierarchical data are ",
           "expected to match but don't.")
 
